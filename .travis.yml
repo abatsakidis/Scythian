@@ -1,4 +1,4 @@
 language: bash
 
 script:
-- ./install.sh
+- sudo ./install.sh
