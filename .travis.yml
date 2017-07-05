@@ -1,4 +1,4 @@
 language: bash
 sudo: required
 script:
-- sudo ./install.sh
+- chmod u+x ./install.sh | sudo ./install.sh
