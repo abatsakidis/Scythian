@@ -17,7 +17,7 @@ The goal of this project was to allow a portable set of tools to be easily insta
 
 ## How To ##
 
-To start, run the installer: sudo ./install.sh
+To start, run the installer: sudo ./install.sh <br>
 Install the dependencies first via option 1) Install/Check Dependencies
 
 ## Author ##
