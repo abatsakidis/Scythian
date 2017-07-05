@@ -22,6 +22,6 @@ Install the dependencies first via option 1) Install/Check Dependencies
 
 ## Author ##
 
-Batsakidis Athanasios
-Security Consultant
+Batsakidis Athanasios<br>
+Security Consultant<br>
 a.batsakidis@re-think.gr
