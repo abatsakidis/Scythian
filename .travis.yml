@@ -1,6 +1,4 @@
 language: bash
-
 sudo: required
-
 script:
 - sudo ./install.sh
