@@ -69,13 +69,6 @@ sudo pip install -e git+git://github.com/ramen/phply.git#egg=phply > /dev/null 2
 echo -e "\e[32m[Done]\e[39m"
 fi
 
-if [ ! -d /scythian/web/waffit/.svn ] ; then
-echo -n "Installing waffit..."
-cd /scythian/web && svn checkout http://waffit.googlecode.com/svn/trunk/ waffit > /dev/null 2>&1
-cd /scythian/web/waffit && chmod 700 wafw00f.py > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
 if [ ! -d /scythian/fuzzers/sulley ] ; then
 echo -n "Installing Sulley..."
 cd /scythian/fuzzers && svn checkout http://sulley.googlecode.com/svn/trunk/ sulley > /dev/null 2>&1
@@ -92,13 +85,6 @@ if [ ! -d /scythian/web/joomscan ] ; then
 echo -n "Installing Joomla Scanner..."
 cd /scythian/web/ && svn co https://svn.code.sf.net/p/joomscan/code/ joomscan > /dev/null 2>&1
 cd /scythian/web/joomscan/trunk && chmod 755 joomscan.pl > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/enumeration/theharvester ] ; then
-echo -n "Installing the Harvester..."
-cd /scythian/enumeration && svn checkout http://theharvester.googlecode.com/svn/trunk/ theharvester > /dev/null 2>&1
-cd /scythian/enumeration/theharvester && chmod 755 theHarvester.py > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
 fi
 
@@ -137,24 +123,9 @@ fi
 #cd /pentest/wireless/airgraph-ng && chmod 755 airgraph-ng
 #fi
 
-if [ ! -d /scythian/wireless/reaver ] ; then
-echo -n "Installing Reaver..."
-cd /scythian/wireless && svn checkout http://reaver-wps.googlecode.com/svn/trunk/ reaver > /dev/null 2>&1
-cd /scythian/wireless/reaver/src && ./configure > /dev/null 2>&1
-make > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
 if [ ! -d /scythian/web/captcha-breaker ] ; then
 echo -n "Installing Captcha Breaker..."
 cd /scythian/web && svn checkout http://captcha-breaker.googlecode.com/svn/trunk/ captcha-breaker > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/enumeration/dnsmap ] ; then
-echo -n "Installing DNSMap..."
-cd /scythian/enumeration && svn checkout http://dnsmap.googlecode.com/svn/trunk/ dnsmap > /dev/null 2>&1
-cd /scythian/enumeration/dnsmap && gcc -o dnsmap dnsmap.c > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
 fi
 
@@ -248,14 +219,6 @@ if [ ! -d /scythian/web/wpscan ] ; then
 echo -n "Installing Wordpress Scanner..."
 cd /scythian/web && git clone https://github.com/wpscanteam/wpscan.git > /dev/null 2>&1
 sudo bundle install --without test development > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -f /usr/local/bin/smbclient.py ] ; then
-echo -n "Installing Impacket..."
-cd /scythian/temp && svn checkout http://impacket.googlecode.com/svn/trunk/ impacket > /dev/null 2>&1
-cd impacket && sudo python setup.py install > /dev/null 2>&1
-cd /scythian/temp && sudo rm -rf impacket > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
 fi
 
