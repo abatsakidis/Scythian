@@ -101,14 +101,6 @@ echo -e "\e[32m[Done]\e[39m"
 fi
 
 
-if [ ! -d /scythian/cisco/cge ] ; then
-echo -n "Installing Cisco Global Exploiter..."
-cd /scythian/temp && wget http://dl.packetstormsecurity.net/0405-exploits/cge-13.tar.gz > /dev/null 2>&1
-tar zxvf cge-13.tar.gz > /dev/null 2>&1 && rm -rf cge-13.tar.gz
-mv cge-13/ /scythian/cisco/cge && cd /scythian/cisco/cge
-chmod 700 cge.pl && dos2unix cge.pl > /dev/null 2>&1
-fi
-
 if [ ! -f /scythian/cisco/copy-router-config.pl ] ; then
 cd /scythian/cisco && wget http://littlehacker.persiangig.com/cisco/copy-router-config.pl > /dev/null 2>&1
 chmod 755 copy-router-config.pl
@@ -126,9 +118,9 @@ fi
 
 if [ ! -d /scythian/enumeration/hydra ] ; then
 echo -n "Installing THC Hydra..."
-cd /scythian/temp && wget http://www.thc.org/releases/hydra-7.5.tar.gz > /dev/null 2>&1
-tar zxvf hydra-7.5.tar.gz > /dev/null 2>&1 && rm -rf hydra-7.5.tar.gz
-mv hydra-7.5 /scythian/enumeration/hydra && cd /scythian/enumeration/hydra/
+cd /scythian/temp && wget https://www.thc.org/download.php?t=r&f=hydra-8.5.tar.gz > /dev/null 2>&1
+tar zxvf hydra-8.5.tar.gz > /dev/null 2>&1 && rm -rf hydra-8.5.tar.gz
+mv hydra-8.5 /scythian/enumeration/hydra && cd /scythian/enumeration/hydra/
 ./configure > /dev/null 2>&1 && make > /dev/null 2>&1
 sudo make install > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
@@ -142,23 +134,6 @@ mv stompy /scythian/web/
 echo -e "\e[32m[Done]\e[39m"
 fi
 
-if [ ! -d /scythian/web/ratproxy ] ; then
-echo -n "Installing Ratproxy..."
-cd /scythian/temp && wget http://ratproxy.googlecode.com/files/ratproxy-1.58.tar.gz > /dev/null 2>&1
-tar zxvf ratproxy-1.58.tar.gz > /dev/null 2>&1 && rm -rf ratproxy-1.58.tar.gz
-mv ratproxy/ /scythian/web/ && cd /scythian/web/ratproxy
-make > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/wireless/asleap ] ; then
-echo -n "Installing asleap..."
-cd /scythian/temp && wget http://prdownloads.sourceforge.net/project/asleap/asleap/asleap-1.4/asleap-1.4.tgz > /dev/null 2>&1
-tar xvf asleap-1.4.tgz > /dev/null 2>&1 && rm -rf asleap-1.4.tgz
-mv asleap/ /scythian/wireless/ && cd /scythian/wireless/asleap
-make > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
 
 if [ ! -f /scythian/wireless/eapmd5crack.py ] ; then
 echo -n "Installing EAP MD5 Crack..."
@@ -226,17 +201,6 @@ cd /scythian/voip/rtpbreak && make > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
 fi
 
-if [ ! -d /scythian/voip/voipong ] ; then
-echo -n "Installing VOIPong..."
-cd /scythian/temp && wget http://www.enderunix.org/voipong/voipong-2.0.tar.gz > /dev/null 2>&1
-tar zxvf voipong-2.0.tar.gz > /dev/null 2>&1 && rm -rf voipong-2.0.tar.gz
-mv voipong-2.0/ /scythian/voip/voipong
-cd /scythian/voip/voipong
-mv Makefile.linux makefile && make > /dev/null 2>&1
-sudo make install > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
 if [ ! -d /scythian/enumeration/thc-ipv6 ] ; then
 echo -n "Installing THC IPv6..."
 cd /scythian/temp && wget http://www.thc.org/releases/thc-ipv6-2.3.tar.gz > /dev/null 2>&1
@@ -269,15 +233,6 @@ wget http://portswigger.net/burp/burpsuite_free_v1.5.jar > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
 fi
 
-if [ ! -d /scythian/enumeration/thc-pptp-bruter ] ; then
-echo -n "Installing THC PPTP Bruteforcer..."
-cd /scythian/temp && wget http://dl.packetstormsecurity.net/groups/thc/thc-pptp-bruter-0.1.4.tar.gz > /dev/null 2>&1
-tar xvf thc-pptp-bruter-0.1.4.tar.gz > /dev/null 2>&1 && mv THC-pptp-bruter-0.1.4/ /scythian/enumeration/thc-pptp-bruter
-rm -rf thc-pptp-bruter-0.1.4.tar.gz && cd /scythian/enumeration/thc-pptp-bruter/
-./configure > /dev/null 2>&1 && make > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
 if [ ! -d /scythian/cisco/torch ] ; then
 echo -n "Installing Cisco Torch..."
 cd /scythian/temp && wget http://www.hackingciscoexposed.com/tools/cisco-torch-0.4b.tar.gz > /dev/null 2>&1
@@ -286,106 +241,6 @@ mv cisco-torch-0.4b /scythian/cisco/torch
 echo -e "\e[32m[Done]\e[39m"
 fi
 
-if [ ! -d /scythian/scanners/snmp/snmpenum ] ; then
-echo -n "Installing SNMPenum..."
-cd /scythian/scanners/snmp && mkdir snmpenum
-cd snmpenum && wget http://dl.packetstormsecurity.net/UNIX/scanners/snmpenum.zip > /dev/null 2>&1
-unzip snmpenum.zip > /dev/null 2>&1 && rm -rf snmpenum.zip
-chmod 700 snmpenum.pl
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/enumeration/admsnmp ] ; then
-echo -n "Installing ADMsnmp..."
-cd /scythian/temp && wget http://packetstorm.tacticalflex.com/groups/ADM/ADMsnmp.0.1.tgz > /dev/null 2>&1
-tar zxvf ADMsnmp.0.1.tgz > /dev/null 2>&1 && rm -rf ADMsnmp.0.1.tgz
-mv ADMsnmp/ /scythian/enumeration/admsnmp  && cd /scythian/enumeration/admsnmp
-gcc snmp.c -o ADMsnmp > /dev/null 2>&1 && rm -rf snmp.c ADMsnmp.README
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-#if [ ! -d /scythian/enumeration/firewalk ] ; then
-#echo -n "Installing Firewalk..."
-#cd /scythian/temp && wget http://packetstormsecurity.com/files/10767/firewalk-0.99.1.tar.gz.html > /dev/null 2>&1
-#tar zxvf firewalk-0.99.1.tar.gz > /dev/null 2>&1 && rm -rf firewalk.tar.gz
-#mv Firewalk/ /scythian/enumeration/firewalk 
-#cd /pentest/temp && git clone http://git.libssh.org/projects/libssh.git libssh 
-#cd libssh/built && ./build_make.sh
-#make && make install
-#cd /pentest/temp && wget http://prdownloads.sourceforge.net/libdnet/libdnet-1.11.tar.gz
-#tar zxvf libdnet-1.11.tar.gz && rm -rf libdnet-1.11.tar.gz
-#cd libdnet-1.11/ && ./configure
-#make && sudo make install
-#sudo ln -s /usr/lib/libdumbnet.so /usr/lib/libdnet.so && sudo ln -s /usr/include/dumbnet.h /usr/include/dnet.h
-#cd /scythian/enumeration/firewalk
-#touch src/firewalk.good && touch include/firewalk.h.1
-#touch include/firewalk.h.2 && touch  configure.1
-#touch  configure.2 && touch configure.3
-#touch  configure.4 && touch configure.5
-#sed "192i\ break;" src/firewalk.c > src/firewalk.good
-#rm -rf src/firewalk.c && mv src/firewalk.good src/firewalk.c
-#cp SOURCE SOURCE.org
-#sed "41d" SOURCE > SOURCE.1
-#sed "41 i\#include <dumbnet.h>" SOURCE.1 > SOURCE.2
-#rm -rf SOURCE && mv SOURCE.2 SOURCE
-#rm -rf SOURCE.1 && rm -rf SOURCE.ORG
-#sed "41d" include/firewalk.h > include/firewalk.h.1
-#sed "41 i\#include <dumbnet.h>" include/firewalk.h.1 > include/firewalk.h.2
-#rm -rf include/firewalk.h && mv include/firewalk.h.2 include/firewalk.h
-#rm -rf include/firewalk.h.1
-#sed "2370d" configure > configure.1
-#sed '2370 i\LIBS="-ldumbnet  $LIBS"' configure.1 > configure.2
-#sed "2406d" configure.2 > configure.3
-#sed "2406 i\ac_cv_lib_dnet_arp_get=yes" configure.3 > configure.4
-#sed "2418d" configure.4 > configure.5
-#sed '2418 i\LIBS="-ldumbnet $LIBS"' configure.5 > configure.6
-#rm -rf configure && mv configure.6 configure
-#rm -rf configure.1 && rm -rf configure.2
-#rm -rf configure.3 && rm -rf configure.4
-#rm -rf configure.5 && chmod +x configure
-#./configure > /dev/null 2>&1
-#make > /dev/null 2>&1 && sudo make install > /dev/null 2>&1
-#sudo cp man/firewalk.8 /usr/local/man/man8
-#echo -e "\e[32m[Done]\e[39m"
-#fi
-
-if [ ! -d /scythian/audit/graudit ] ; then
-echo -n "Installing Grep Auditing Utility..."
-cd /scythian/temp && wget http://dl.packetstormsecurity.net/UNIX/security/graudit-1.9.tar.gz > /dev/null 2>&1
-tar zxvf graudit-1.9.tar.gz > /dev/null 2>&1 && rm graudit-1.9.tar.gz
-mv graudit-1.9/ /scythian/audit/graudit
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/audit/rats ] ; then
-echo -n "Rough Auditing Tool for Security..."
-cd /scythian/temp && wget https://www.fortify.com/downloads2/public/rats-2.3.tar.gz  > /dev/null 2>&1
-tar zxvf rats-2.3.tar.gz > /dev/null 2>&1 && rm -rf rats-2.3.tar.gz
-mv rats-2.3 /scythian/audit/rats && cd /scythian/audit/rats
-./configure > /dev/null 2>&1 && make > /dev/null 2>&1
-sudo make install > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/audit/nipper ] ; then
-echo -n "Installing Nipper..."
-cd /scythian/temp && wget http://dl.packetstormsecurity.net/cisco/nipper-0.11.7.tgz > /dev/null 2>&1
-tar zxvf nipper-0.11.7.tgz > /dev/null 2>&1 && rm -rf nipper-0.11.7.tgz
-mv nipper-0.11.7/ /scythian/audit/nipper
-cd /scythian/audit/nipper && make > /dev/null 2>&1
-sudo make install > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/audit/rat ] ; then
-echo -n "Installing CIS Router Auditing Tool..."
-#cd /scythian/temp && wget --no-check-certificate https://community.cisecurity.org/download/?redir=/cisco/rat-2.2-dist.sh.gz -O rat.gz > /dev/null 2>&1
-#gunzip rat.gz > /dev/null 2>&1 && rm -rf rat.gz
-#chmod 700 rat
-#./rat > /dev/null 2>&1 && mv rat-2.2P/ /scythian/audit/rat
-#rm -rf rat
-echo -e "\e[32m[Done]\e[39m"
-fi
 
 if [ ! -d /scythian/audit/rips ] ; then
 echo -n "Downloading RIPS PHP Static Source Code Analyzer..."
@@ -437,85 +292,11 @@ make linux-x86-64-native > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
 fi
 
-if [ ! -d /scythian/passwords/cewl ] ; then
-echo -n "Installing Cewl..."
-cd /scythian/temp && wget http://www.digininja.org/files/cewl_4.1.tar.bz2 > /dev/null 2>&1
-bunzip2 cewl_4.1.tar.bz2 > /dev/null 2>&1 && tar xvf cewl_4.1.tar  > /dev/null 2>&1
-mv cewl/ /scythian/passwords/ && rm -rf cewl_4.1.tar
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-#if [ ! -d /pentest/enumeration/bile ] ; then
-#echo "Installing Bile"
-#mkdir /pentest/enumeration/bile && cd /pentest/enumeration/bile
-#wget http://www.sensepost.com/cms/resources/labs/tools/misc/BiLE-suite.tgz && tar zxvf BiLE-suite.tgz
-#rm -rf BiLE-suite.tgz && wget http://www.sensepost.com/cms/resources/labs/tools/misc/go.pl -O proxyscan.pl
-#chmod 700 proxyscan.pl
-#fi
-
-if [ ! -d /scythian/enumeration/httprint ] ; then
-echo -n "Installing HTTPrint..."
-cd /scythian/temp && wget http://dl.packetstormsecurity.net/UNIX/scanners/httprint_linux_301.zip  > /dev/null 2>&1
-unzip httprint_linux_301.zip > /dev/null 2>&1 && rm -rf httprint_linux_301.zip
-mv httprint_301/linux /scythian/enumeration/httprint
-cd /scythian/temp && rm -rf httprint_301/
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/web/xsser ] ; then
-echo -n "Installing XSSer..."
-cd /scythian/temp && wget http://dl.packetstormsecurity.net/UNIX/scanners/xsser_1.5-1.tar.gz > /dev/null 2>&1
-tar zxvf xsser_1.5-1.tar.gz > /dev/null 2>&1 && rm -rf xsser_1.5-1.tar.gz
-mv xsser-public/ /scythian/web/xsser && cd /scythian/web/xsser
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/web/skipfish ] ; then
-echo -n "Installing skipfish..."
-cd /scythian/web/ && wget http://skipfish.googlecode.com/files/skipfish-2.10b.tgz > /dev/null 2>&1
-tar zxvf skipfish-2.10b.tgz > /dev/null 2>&1 && rm -rf skipfish-2.10b.tgz
-mv skipfish-2.10b skipfish
-cd skipfish && make > /dev/null 2>&1
-cp /scythian/web/skipfish/dictionaries/complete.wl /scythian/web/skipfish/dictionaries/skipfish.wl
-echo -e "\e[32m[Done]\e[39m"
-fi
-
 if [ ! -d /scythian/misc/flare ] ; then
 echo -n "Installing Flare..."
 cd /scythian/misc && mkdir flare
 cd /scythian/misc/flare && wget http://www.nowrap.de/download/flare06linux.tgz > /dev/null 2>&1
 tar xvf flare06linux.tgz > /dev/null 2>&1 && rm -rf flare06linux.tgz
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/passwords/hashcat ] ; then
-echo -n "Installing oclHashcat+..."
-cd /scythian/temp && wget http://hashcat.net/files/cudaHashcat-1.31.7z > /dev/null 2>&1
-7za x cudaHashcat-1.31.7z > /dev/null 2>&1 && rm -rf cudaHashcat-1.31.7z
-mv oclHashcat-plus-0.14 /scythian/passwords/hashcat
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/exploits/windows-tools ] ; then
-echo -n "Installing Windows Tools..."
-cd /scythian/exploits && mkdir windows-tools
-cd windows-tools && wget http://download.sysinternals.com/files/PSTools.zip > /dev/null 2>&1
-unzip PSTools.zip > /dev/null 2>&1 && rm -rf PSTools.zip
-wget http://dl.packetstormsecurity.net/groups/checksum/nc.exe > /dev/null 2>&1
-cd /scythian/temp && wget http://swamp.foofus.net/fizzgig/fgdump/fgdump-2.1.0-exeonly.tar.bz2 > /dev/null 2>&1
-bunzip2 fgdump-2.1.0-exeonly.tar.bz2 > /dev/null 2>&1 && rm -rf fgdump-2.1.0-exeonly.tar.bz2
-tar xvf fgdump-2.1.0-exeonly.tar > /dev/null 2>&1 && rm -rf fgdump-2.1.0-exeonly.tar
-mv Release/fgdump.exe /scythian/exploits/windows-tools/ && rm -rf Release/
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/enumeration/ike ] ; then
-echo -n "Installing VPN Tools..."
-cd /scythian/temp && wget http://www.ernw.de/download/ikeprobe.zip --no-check-certificate > /dev/null 2>&1
-unzip ikeprobe.zip > /dev/null 2>&1 && rm -rf ikeprobe.zip
-mkdir /scythian/enumeration/ike
-mv ikeprobe.exe /scythian/enumeration/ike/ && mv libeay32.dll /pentest/enumeration/ike/
-cd /scythian/enumeration/ike && wget http://prdownloads.sourceforge.net/project/ikecrack/ikecrack-perl/1.00/ikecrack-snarf-1.00.pl > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
 fi
 
@@ -535,15 +316,6 @@ mv rdp-sec-check-0.8 /scythian/enumeration/rdp-sec-check
 echo -e "\e[32m[Done]\e[39m"
 fi
 
-if [ ! -d /scythian/misc/dradis ] ; then
-echo -n "Installing Dradis..."
-wget http://downloads.sourceforge.net/dradis/dradis-v2.9.0.tar.gz > /dev/null 2>&1
-tar xvf dradis-v2.9.0.tar.gz > /dev/null 2>&1 && rm -rf dradis-v2.9.0.tar.gz
-mv dradis-2.9/ /scythian/misc/dradis && cd /scythian/misc/dradis/server
-sudo bundle install > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
-fi
-
 if [ ! -d /scythian/wireless/hwk ] ; then
 echo -n "Installing HWK Wireless Auditing Tool..."
 cd /scythian/temp && wget http://prdownloads.sourceforge.net/project/hwk/hwk_0.3.2.tar.gz > /dev/null 2>&1
@@ -553,26 +325,11 @@ cd /scythian/wireless/hwk && make  > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
 fi
 
-if [ ! -f /scythian/cisco/cisc0wn.sh ] ; then
-echo -n "Installing Cisco 0wn..."
-cd /scythian/cisco && wget http://www.commonexploits.com/tools/cisc0wn/cisc0wn.sh > /dev/null 2>&1
-chmod 755 cisc0wn.sh
-echo -e "\e[32m[Done]\e[39m"
-fi
-
 if [ ! -d /scythian/exploits/smbexec ] ; then
 echo -n "Installing smbexec..."
 cd /scythian/temp && wget http://prdownloads.sourceforge.net/project/smbexec/smbexec-1.1.0.tar.gz > /dev/null 2>&1
 tar xvf smbexec-1.1.0.tar.gz > /dev/null 2>&1 && rm -rf smbexec-1.1.0.tar.gz
 mv smbexec /scythian/exploits
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -d /scythian/web/mantra ] ; then
-echo -n "Installing OWASP Mantra..."
-cd /scythian/temp && wget http://getmantra.googlecode.com/files/Mantra%20Lexicon%20Lin32%20EN.tar.bz2 -O MantraLexicon.tar.bz2 > /dev/null 2>&1
-bunzip2 MantraLexicon.tar.bz2 > /dev/null 2>&1 && tar xvf MantraLexicon.tar > /dev/null 2>&1
-rm -rf MantraLexicon.tar && mv OWASP\ Mantra\ -\ Lexicon\ -en\ 32\ bit\ Linux/ /scythian/web/mantra
 echo -e "\e[32m[Done]\e[39m"
 fi
 
@@ -592,17 +349,9 @@ cd /scythian/temp && wget --no-check-certificate http://labs.portcullis.co.uk/do
 tar xvf enum4linux-0.8.8.tar.gz > /dev/null 2>&1 && rm -rf enum4linux-0.8.8.tar.gz
 mv enum4linux-0.8.8 /scythian/enumeration/win-enum
 cd /scythian/temp && wget --no-check-certificate http://labs.portcullis.co.uk/download/polenum-0.2.tar.bz2 > /dev/null 2>&1
-bunzip2 polenum-0.2.tar.bz2 > /dev/null 2>&1 && tar xvf polenum-0.2.tar
+bunzip2 polenum-0.2.tar.bz2 > /dev/null 2>&1 && tar xvf polenum-0.2.tar > /dev/null 2>&1
 rm -rf polenum-0.2.tar > /dev/null 2>&1 && sudo mv polenum-0.2/polenum.py /usr/local/bin/
 sudo chmod 755 /usr/local/bin/polenum.py && rm -rf rm -rf polenum-0.2/
-echo -e "\e[32m[Done]\e[39m"
-fi
-
-if [ ! -f /scythian/database/bsqlbf-v2.pl ] ; then
-echo -n "Installing Blind SQL Brute Forcer..."
-cd /scythian/temp && wget --no-check-certificate http://labs.portcullis.co.uk/download/bsqlbfv2.zip > /dev/null 2>&1
-unzip bsqlbfv2.zip > /dev/null 2>&1 && rm -rf bsqlbfv2.zip
-mv bsqlbf-v2/bsqlbf-v2.pl /scythian/database/ && rm -rf bsqlbf-v2/
 echo -e "\e[32m[Done]\e[39m"
 fi
 
@@ -621,23 +370,5 @@ cd aspshell && wget http://downloads.sourceforge.net/project/aspshell/aspshell/a
 unzip aspshell-0.2.zip > /dev/null 2>&1 && rm -rf aspshell-0.2.zip
 echo -e "\e[32m[Done]\e[39m"
 fi
-#if [ ! -d /pentest/enumeration/netglub ] ; then
-#cd /pentest/enumeration && wget http://redmine.lab.diateam.net/attachments/download/1/netglub-1.0.tar.gz
-#tar -xzvf netglub-1.0.tar.gz && rm -rf netglub-1.0.tar.gz
-#mv netglub-1.0 netglub
-#cd /pentest/enumeration/netglub/qng/
-#qmake && make
-#echo "Enter the root mysql password to create the netglub user and databases"
-#mysqladmin create netglub -u root -p
-#mysql -u root -p -e "grant all privileges on netglub.* to 'netglub'@'localhost' identified by 'netglub'"
-#mysql -u root -p netglub < /pentest/enumeration/netglub/master/tools/sql/netglub.sql  
-#cd /pentest/enumeration/netglub/master
-#qmake && make
-#cd tools/ && sudo ./install.sh
-#cd /pentest/enumeration/netglub/slave
-#qmake && make
-#cd tools/ && sudo ./install.sh
-#echo "When starting netglub for the first time use the code 2222-4567-89ab-cdef"
-#fi
 echo ""
 echo "Static Code installation complete"
