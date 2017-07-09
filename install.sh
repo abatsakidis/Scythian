@@ -1,7 +1,9 @@
 #!/bin/bash
 # Scythian Installation Script v0.1
 ###################################################
-$OLDPWD=pwd
+OLDPWD=pwd
+YELLOW='\033[1;33m'
+DEFAULT='\e[39m'
 #if [[ $EUID -eq 0 ]]; then
 #echo "This script must not be run as root.." 1>&2
 #exit 1
@@ -41,7 +43,7 @@ clear
 selection=
 until [ "$selection" = "0" ]; do
      echo ""
-     echo "   (                                         "
+     echo -e ${YELLOW}"   (                                         "
      echo "   )\ )              )    )                  "
      echo "  (()/(     (     ( /( ( /( (      )         "
      echo "   /(_)) (  )\ )  )\()))\()))\  ( /(   (     "
@@ -50,7 +52,7 @@ until [ "$selection" = "0" ]; do
      echo "  \__ \/ _|| || ||  _|| ' \ | |/ _  || ' \)) "
      echo "  |___/\__| \_, | \__||_||_||_|\__,_||_||_|  "
      echo "            |__/                             "
-     echo ""
+     echo -e ${DEFAULT}""
      echo "The Vulnerability Assessment and Penetration Testing Toolkit"
      echo "                                            Dark Version 1.0"
      echo ""
