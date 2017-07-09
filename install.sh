@@ -1,7 +1,7 @@
 #!/bin/bash
 # Scythian Installation Script v0.1
 ###################################################
-$OLDPWD=PWD
+$OLDPWD=pwd
 #if [[ $EUID -eq 0 ]]; then
 #echo "This script must not be run as root.." 1>&2
 #exit 1
@@ -80,6 +80,6 @@ until [ "$selection" = "0" ]; do
          7 ) $OLDPWD/scripts/db-update.sh;;
          8 ) $OLDPWD/scripts/update-tools.sh;;
          0 ) exit;;
-         * ) echo "Please enter your selection"
+         * ) exit;;
      esac
 done
