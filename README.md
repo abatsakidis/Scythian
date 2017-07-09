@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/abatsakidis/scythian.svg?branch=master)](https://travis-ci.org/abatsakidis/scythian)
+
 ## Description ##
 
 The set of scripts included in this package will create a Kali type environment for the performing of
