@@ -12,7 +12,7 @@ The goal of this project was to allow a portable set of tools to be easily insta
 * deps.sh - Contains the necessary software dependencies for the tools within the kit to function.
 * exploits.sh - Contains the scripts to download various exploit code from public sources
 * static.sh - Downloads static applications which are not svn capable
-* nessus.sh - Install Nesus
+* nessus.sh - Install Nessus
 * svn.sh - SVN repository scripts to checkout and update the various tools
 * wordlists.sh - Contains the scripts to download the various wordlists from public sources
 * update.sh - The script that makes it all happen
