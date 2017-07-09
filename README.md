@@ -24,27 +24,27 @@ Install the dependencies first via option 1) Install/Check Dependencies
 
 ## Tested on ##
 
-            .-/+oossssoo+/-.               theB0x@DESKTOP-9V05VK0
-        `:+ssssssssssssssssss+:`           ----------------------
-      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 14.04.5 LTS on Windows 10 x86_64
-    .ossssssssssssssssssdMMMNysssso.       Kernel: 3.4.0+
-   /ssssssssssshdmmNNmmyNMMMMhssssss/      Uptime: 7 hours, 26 mins
-  +ssssssssshmydMMMMMMMNddddyssssssss+     Packages: 714
- /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Shell: bash 4.3.11
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Terminal: /dev/tty2
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+   CPU: Intel 2 Quad Q6600 (4) @ 2.400GHz
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso   Memory: 2690MiB / 4085MiB
-ossyNMMMNyMMhsssssssssssssshmmmhssssssso
-+sssshhhyNMMNyssssssssssssyNMMMysssssss+
-.ssssssssdMMMNhsssssssssshNMMMdssssssss.
- /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/
-  +sssssssssdmydMMMMMMMMddddyssssssss+
-   /ssssssssssshdmNNNNmyNMMMMhssssss/
-    .ossssssssssssssssssdMMMNysssso.
-      -+sssssssssssssssssyyyssss+-
-        `:+ssssssssssssssssss+:`
-            .-/+oossssoo+/-.
-
+            .-/+oossssoo+/-.               theB0x@DESKTOP-9V05VK0<br>
+        `:+ssssssssssssssssss+:`           ----------------------<br>
+      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 14.04.5 LTS on Windows 10 x86_64<br>
+    .ossssssssssssssssssdMMMNysssso.       Kernel: 3.4.0+<br>
+   /ssssssssssshdmmNNmmyNMMMMhssssss/      Uptime: 7 hours, 26 mins<br>
+  +ssssssssshmydMMMMMMMNddddyssssssss+     Packages: 714<br>
+ /sssssssshNMMMyhhyyyyhmNMMMNhssssssss/    Shell: bash 4.3.11<br>
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.   Terminal: /dev/tty2<br>
++sssshhhyNMMNyssssssssssssyNMMMysssssss+   CPU: Intel 2 Quad Q6600 (4) @ 2.400GHz<br>
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso   Memory: 2690MiB / 4085MiB<br>
+ossyNMMMNyMMhsssssssssssssshmmmhssssssso<br>
++sssshhhyNMMNyssssssssssssyNMMMysssssss+<br>
+.ssssssssdMMMNhsssssssssshNMMMdssssssss.<br>
+ /sssssssshNMMMyhhyyyyhdNMMMNhssssssss/<br>
+  +sssssssssdmydMMMMMMMMddddyssssssss+<br>
+   /ssssssssssshdmNNNNmyNMMMMhssssss/<br>
+    .ossssssssssssssssssdMMMNysssso.<br>
+      -+sssssssssssssssssyyyssss+-<br>
+        `:+ssssssssssssssssss+:`<br>
+            .-/+oossssoo+/-.<br>
+<br>
 ## Author ##
 
 Batsakidis Athanasios<br>
