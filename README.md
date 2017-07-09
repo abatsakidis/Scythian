@@ -24,8 +24,8 @@ Install the dependencies first via option 1) Install/Check Dependencies
 
 ## Tested on ##
 
-OS: Ubuntu 14.04.5 LTS on Windows 10 x86_64 <br>
-Kernel: 3.4.0+ <br>
+**OS**: Ubuntu 14.04.5 LTS on Windows 10 x86_64 <br>
+**Kernel**: 3.4.0+ <br>
 Packages: 714 <br>
 Shell: bash 4.3.11 <br>
 Terminal: /dev/tty2 <br>
