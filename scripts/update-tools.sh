@@ -76,9 +76,6 @@ echo -e "\e[32m[Done]\e[39m"
 echo -n "Updating Captcha Breaker..."
 cd /scythian/web/captcha-breaker && svn up > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
-echo -n "Updating DNSMap..."
-cd /scythian/enumeration/dnsmap && svn up > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
 echo -n "Updating SQLNinja..."
 cd /scythian/database/sqlninja && svn up > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
@@ -103,9 +100,6 @@ echo -e "\e[32m[Done]\e[39m"
 echo -n "Updating keimpx..."
 cd /scythian/exploits/keimpx && svn up > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
-echo -n "Updating SIPVicious..."
-cd /scythian/voip/sipvicious/ && svn up > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
 echo -n "Updating Router Defense..."
 cd /scythian/audit/routerdefense/ && svn up > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
@@ -123,13 +117,6 @@ echo -n "Updating ncrack - you will need to recompile if needed..."
 cd /scythian/scanners/ncrack && svn up > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
 
-#echo -n "Updating VA-PT..."
-#cd /scythian/misc/va-pt && svn up > /dev/null 2>&1
-#echo -e "\e[32m[Done]\e[39m"
-
-echo -n "Updating the Vulnerability Database Portal..."
-cd /var/www/search && sudo svn up > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
 echo -n "Updating Warvox..."
 cd /scythian/exploits/warvox && git pull > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
