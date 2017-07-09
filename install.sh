@@ -1,7 +1,7 @@
 #!/bin/bash
 # Scythian Installation Script v0.1
 ###################################################
-OLDPWD=pwd
+$OLDPWD=pwd
 YELLOW='\033[1;33m'
 DEFAULT='\e[39m'
 #if [[ $EUID -eq 0 ]]; then
@@ -66,6 +66,7 @@ until [ "$selection" = "0" ]; do
      echo "6 - Install/Update wordlist Repositories"
      echo "7 - Install/Update Vulnerability/Exploit Databases"
      echo "8 - Update all tool packages"
+     echo "9 - Install Nesus"
      echo ""
      echo "0 - Exit program"
      echo ""
@@ -81,6 +82,7 @@ until [ "$selection" = "0" ]; do
          6 ) $OLDPWD/scripts/wordlists.sh;;
          7 ) $OLDPWD/scripts/db-update.sh;;
          8 ) $OLDPWD/scripts/update-tools.sh;;
+         9 ) $OLDPWD/scripts/nessus.sh;;
          0 ) exit;;
          * ) exit;;
      esac

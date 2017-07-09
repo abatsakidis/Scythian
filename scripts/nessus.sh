@@ -1,7 +1,7 @@
 #if [ ! -d /scythian/scanners/nessus ] ; then
 echo "Installing Nessus Scanner..."
 mkdir /scythian/scanners/nessus
-echo -ne "[\033[31mX\e[39m] Where is Nessus  .deb file (ex. /root/Nessus-5.2.7-debian6_i386.deb) :"
+echo -ne "[\033[31mX\e[39m] Where is Nessus  .deb file (ex. /root/Nessus-6.10.8-ubuntu910_i386.deb) :"
 read nessus
 cp $nessus /scythian/scanners/nessus/ 
 cd /scythian/scanners/nessus
