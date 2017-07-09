@@ -8,7 +8,8 @@ echo -e "\e[32m[Done]\e[39m"
 fi
 if [ ! -d /scythian/wireless/wifite/ ] ; then
 echo -n "Installing Wifitie..."
-cd /scythian/wireless > /dev/null 2>&1 && svn checkout http://wifite.googlecode.com/svn/trunk/ wifite > /dev/null 2>&1
+cd /scythian/wireless > /dev/null 2>&1 && wget https://raw.github.com/derv82/wifite/master/wifite.py > /dev/null 2>&1
+chmod +x wifite.py  > /dev/null 2>&1
 echo -e "\e[32m[Done]\e[39m"
 fi
 
