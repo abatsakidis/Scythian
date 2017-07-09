@@ -24,9 +24,9 @@ Install the dependencies first via option 1) Install/Check Dependencies
 
 ## Tested on ##
 
-            .-/+oossssoo+/-.               theB0x@DESKTOP-9V05VK0<br>
-        `:+ssssssssssssssssss+:`           ----------------------<br>
-      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 14.04.5 LTS on Windows 10 x86_64<br>
+            .-/+oossssoo+/-.               theB0x@DESKTOP-9V05VK0</br>
+        `:+ssssssssssssssssss+:`           ----------------------</br>
+      -+ssssssssssssssssssyyssss+-         OS: Ubuntu 14.04.5 LTS on Windows 10 x86_64</br>
     .ossssssssssssssssssdMMMNysssso.       Kernel: 3.4.0+<br>
    /ssssssssssshdmmNNmmyNMMMMhssssss/      Uptime: 7 hours, 26 mins<br>
   +ssssssssshmydMMMMMMMNddddyssssssss+     Packages: 714<br>
