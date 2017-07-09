@@ -9,7 +9,7 @@ fi
 
 if [ ! -d /scythian/backdoors/cymothoa ] ; then
 echo -n "Installing Cymothoa..."
-cd /scythian/backdoors/ && wget http://download2.polytechnic.edu.na/pub4/sourceforge/c/cy/cymothoa/cymothoa-1-beta/cymothoa-1-beta.tar.gz > /dev/null 2>&1
+cd /scythian/backdoors/ && wget "https://downloads.sourceforge.net/project/cymothoa/cymothoa-1-beta/cymothoa-1-beta.tar.gz" > /dev/null 2>&1
 tar xfvz  cymothoa-1-beta.tar.gz > /dev/null 2>&1
 rm -rf cymothoa-1-beta.tar.gz 
 mv cymothoa-1-beta cymothoa
@@ -33,4 +33,4 @@ fi
 
 
 echo ""
-echo "Backdoor Software installion complete"
+echo "Backdoor Software installation complete"
