@@ -324,26 +324,5 @@ cd /scythian/web/ && svn checkout http://svn.code.sf.net/p/watobo/code/ watobo >
 echo -e "\e[32m[Done]\e[39m"
 fi
 
-# install Vuln Portal
-if [ ! -d /var/www/search ] ; then
-echo -n "Installing Vulnerability Database Portal..."
-cd /var/www/ && sudo svn co http://va-pt.googlecode.com/svn/trunk/search search > /dev/null 2>&1
-echo -e "\e[32m[Done - http://localhost/search/]\e[39m"
-fi
-
-#if [ ! -d /var/www/portal ] ; then
-#echo "Installing the VA-PT Portal..."
-#cd /var/www/ && sudo svn checkout https://va-pt.googlecode.com/svn/trunk/portal portal > /dev/null 2>&1
-#echo "[*] Creating necessary database and structure, enter the root mysql password..."
-#mysqladmin create application -u root -p && mysql -u root -p -e "grant all privileges on application.* to 'vapt'@'localhost' IDENTIFIED BY 'vapt';" > /dev/null 2>&1
-#echo "[*] Adding default user account - vapt/vapt..."
-#echo "[*] The VA-PT Portal is now available at http://localhost/portal"
-#fi
-
-echo -n "Installing local tools..."
-cp /scythian/misc/va-pt/tools/copy-router-config.pl /scythian/cisco/ > /dev/null 2>&1
-cp /scythian/misc/va-pt/tools/merge-router-config.pl /scythian/cisco/ > /dev/null 2>&1
-cp /scythian/misc/va-pt/tools/dnsrecon.rb /scythian/enumeration/ > /dev/null 2>&1
-echo -e "\e[32m[Done]\e[39m"
 echo ""
 echo "Subversion package installation complete"
