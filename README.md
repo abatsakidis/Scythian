@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/abatsakidis/scythian.svg?branch=master)](https://travis-ci.org/abatsakidis/scythian)
 
+[![Stargazers repo roster for @abatsakidis/Scythian](https://reporoster.com/stars/abatsakidis/Scythian)](https://github.com/abatsakidis/Scythian/stargazers)
+
 ## Description ##
 
 The set of scripts included in this package will create a Kali type environment for the performing of
